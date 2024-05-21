@@ -7,7 +7,7 @@ import Connection from "./databse/db.js";
 
 import { getDocument, updateDocument } from "./controller/documentController.js";
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 4000;
 
 Connection(process.env.URL);
 
