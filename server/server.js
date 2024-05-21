@@ -7,13 +7,14 @@ import Connection from "./databse/db.js";
 
 import { getDocument, updateDocument } from "./controller/documentController.js";
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 9000;
+const BASE_URL=process.env.BASE_URL;
 
 Connection(process.env.URL);
 
 const io=new Server(PORT, {
     cors: {
-        origin:"http://localhost:3000",
+        origin:`${BASE_URL}`,
         methods: ['GET', 'POST']
     }
 });
