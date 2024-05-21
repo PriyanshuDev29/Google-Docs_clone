@@ -1,14 +1,15 @@
 import { Server } from "socket.io";
 
+import * as dotenv from "dotenv";
+dotenv.config();
+
 import Connection from "./databse/db.js";
 
 import { getDocument, updateDocument } from "./controller/documentController.js";
 
 const PORT = process.env.PORT || 9000;
 
-const URL="mongodb://sinhasada9:Luck4396@ac-giglg7o-shard-00-00.npu2ghp.mongodb.net:27017,ac-giglg7o-shard-00-01.npu2ghp.mongodb.net:27017,ac-giglg7o-shard-00-02.npu2ghp.mongodb.net:27017/?ssl=true&replicaSet=atlas-6jhvx8-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Google-Docs-Clone"
-
-Connection(URL);
+Connection(process.env.URL);
 
 const io=new Server(PORT, {
     cors: {
