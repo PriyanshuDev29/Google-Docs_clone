@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:10000](http://localhost:10000) to view it in your browser.
+Open [https://dynamic-alpaca-7f06dc.netlify.app](https://dynamic-alpaca-7f06dc.netlify.app) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
